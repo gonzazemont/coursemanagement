@@ -50,6 +50,7 @@ public class InstructorMapper {
         dto.setId(instructor.getId());
         dto.setFirstName(instructor.getFirstName());
         dto.setLastName(instructor.getLastName());
+        dto.setSpecialty(instructor.getSpecialty());
         return dto;
     }
 }

@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class InstructorSummaryDTO {
-    private int id;
+    private Long id;
     private String firstName;
     private String lastName;
     private String specialty;

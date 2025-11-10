@@ -20,10 +20,10 @@ public interface CourseRepository extends JpaRepository<Course, Long> {
     List<Course> findByInstructorId(Long instructorId);
 
     //search for courses by category
-    List<Course> findByCategoryContainingIgnoreCase(CourseCategory category);
+    List<Course> findByCategory(CourseCategory category);
 
     //search for courses by level
-    List<Course> findByLevelContainingIgnoreCase(CourseLevel level);
+    List<Course> findByLevel(CourseLevel level);
 
     //search for active courses
     List<Course> findByIsActiveTrue();

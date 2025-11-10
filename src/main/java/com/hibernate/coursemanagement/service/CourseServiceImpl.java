@@ -108,7 +108,7 @@ public class CourseServiceImpl implements CourseService{
     @Override
     @Transactional(readOnly = true)
     public List<CourseResponseDTO> getCoursesByCategory(CourseCategory category) {
-        List<Course> courses = courseRepository.findByCategoryContainingIgnoreCase(category);
+        List<Course> courses = courseRepository.findByCategory(category);
         return courses.stream()
                 .map(courseMapper::toResponseDTO)
                 .collect(Collectors.toList());
@@ -117,7 +117,7 @@ public class CourseServiceImpl implements CourseService{
     @Override
     @Transactional(readOnly = true)
     public List<CourseResponseDTO> getCoursesByLevel(CourseLevel level) {
-        List<Course> courses = courseRepository.findByLevelContainingIgnoreCase(level);
+        List<Course> courses = courseRepository.findByLevel(level);
         return courses.stream()
                 .map(courseMapper::toResponseDTO)
                 .collect(Collectors.toList());
