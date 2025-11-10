@@ -40,5 +40,5 @@ public class CreateCourseDTO {
     private Boolean isActive;
 
     @NotNull(message = "Instructor ID is required")
-    private Integer instructorId;
+    private Long instructorId;
 }

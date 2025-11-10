@@ -2,6 +2,7 @@ package com.hibernate.coursemanagement.mapper;
 
 import com.hibernate.coursemanagement.dto.CourseResponseDTO;
 import com.hibernate.coursemanagement.dto.CreateCourseDTO;
+import com.hibernate.coursemanagement.dto.UpdateCourseDTO;
 import com.hibernate.coursemanagement.entity.Course;
 import org.springframework.stereotype.Component;
 
@@ -30,7 +31,7 @@ public class CourseMapper {
 
     //Update an existing Entity with UpdateCourseDTO
     //The instructor must be updated later in the Service if changed
-    public void updateEntity(CreateCourseDTO dto, Course course) {
+    public void updateEntity(UpdateCourseDTO dto, Course course) {
         course.setTitle(dto.getTitle());
         course.setDescription(dto.getDescription());
         course.setCategory(dto.getCategory());
